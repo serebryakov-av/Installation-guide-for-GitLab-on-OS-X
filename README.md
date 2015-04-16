@@ -361,10 +361,10 @@ If you can't build nokogiri 1.6.2 do this:
 then install libiconv from source
  
 	sudo -u git curl -O http://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.13.1.tar.gz
-	tar xvfz libiconv-1.13.1.tar.gz
+	sudo -u git tar xvfz libiconv-1.13.1.tar.gz
 	cd libiconv-1.13.1
-	./configure --prefix=/usr/local/Cellar/libiconv/1.13.1
-	make
+	sudo ./configure --prefix=/usr/local/Cellar/libiconv/1.13.1
+	sudo make
 	sudo make install
 	
 finally we need to continue bundle install
@@ -391,6 +391,10 @@ Here is your admin login credentials:
 
 	login: root
 	password: 5iveL!fe
+
+If `mysql2` error occurs then try this:
+
+	sudo gem install mysql2 ?
 
 #### Precompile assets
 
